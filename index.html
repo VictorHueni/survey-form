@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width , initial-scale=1.0" />
+    <title>Survey Form</title>
+    <link
+      rel="icon"
+      type="img/png"
+      href="https://www.google.com/s2/favicons?domain=jacinto.design"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+
+    <div class="overlay"></div>
+
+    <!-- Title -->
+    <div class="container">
+
+    <div class="title-container">
+      <h1 id="title">freeCodeCamp Survey Form</h1>
+      <p id="description">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem corrupti
+        blanditiis ex, temporibus placeat unde veritatis ipsam architecto,
+        voluptatibus consequuntur ullam ipsa eum rerum alias nisi ab maxime neque!
+        Natus!
+      </p>
+    </div>
+    <!-- Survey Form -->
+    <form action="" class="survey-form" id="survey-form">
+
+      <!-- Personnal Informations -->
+      <fieldset class="personnal-information">
+        <legend>Personnal Information</legend>
+
+        <!-- Name -->
+        <label for="name" id="name-label">Name</label>
+        <input id="name" type="text" name="user-name" placeholder="Enter your name" required/>
+
+        <label for="lastname" id="lastname-label">Lastname</label>
+        <input id="lasatname" type="text" name="user-lastname" placeholder="Enter your lastname"/>
+        
+        <!-- Email -->
+        <label for="email" id="email-label">Email</label>
+        <input id="email" type="email" name="user-email" placeholder="Enter a valid email address" required/>
+        
+
+        <!-- Age -->
+        <label for="age" id="number-label">Age</label>
+        <input id="number" type="number" min="0" max="200" name="user-age" placeholder="Enter your age"/>
+        
+
+        <!-- Roles -->
+        <label for="dropdown" id="roles-label">Current Role</label>
+        <select id="dropdown" name="roles">
+          <option value="" selected disabled>Select your current role</option>
+          <option value="student">Student</option>
+          <option value="employee">Employee</option>
+          <option value="independant">Independant</option>
+          <option value="unemployed">Unemployed</option>
+        </select>
+      </fieldset>
+
+      <!-- Survey -->
+      <fieldset class="survey">
+        <legend>Survey</legend>
+
+        <!-- Recommandation -->
+          <p class="survey-questions">Would you recommend freeCodeCamp to a friend?</p>
+          <div class="survey-answers">
+            <div>
+              <input
+                type="radio"
+                id="definitely"
+                name="review"
+                value="definitely"
+                checked/>
+              <label for="definitely">Definitely</label>
+            </div>
+            <div>
+              <input type="radio" id="maybe" name="review" value="maybe" />
+              <label for="maybe">Maybe</label>
+            </div>
+            <div>
+              <input type="radio" id="not-sure" name="review" value="not-sure" />
+              <label for="not-sure">Not sure</label>
+            </div>
+        </div>
+        <!-- Preferred course -->
+          <p class="survey-questions">Choose your preffered course</p>
+          <div class="survey-answers">
+            <div>
+              <input
+                type="checkbox"
+                id="responsive-web"
+                name="responsive-web"
+                value="responsive-web"
+                checked
+              />
+              <label for="responsive-web">Responsive Web</label>
+            </div>
+            <div>
+              <input type="checkbox" id="javascript" name="javascript" value="javascript" />
+              <label for="javascript">Javascript</label>
+            </div>
+            <div>
+              <input type="checkbox" id="js-library" name="js-library" value="js-library" />
+              <label for="js-library">Javascript Library</label>
+            </div>
+          </div>
+          <!-- Suggestions -->
+
+          <label class="survey-questions" for="suggestions">Any comments or suggestions ?</label>
+          <textarea class="survey-answers" id="suggestions" name="suggestions" rows="5" cols="33" placeholder="Write your comment here"></textarea>
+
+      </fieldset>
+      <input type="submit" id="submit" hidden>
+      <div class="btn-container">
+        <a class="cta-btn" href="#" target="_blank" rel="nofollow"><span>Submit</span></a>
+      </div>
+    </form>
+  </div>
+    <!-- Script -->
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap");
+
+/* GENERAL */
+
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: url("https://images.unsplash.com/photo-1521737711867-e3b97375f902?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+
+  font-family: "Roboto Mono", "monospace";
+}
+
+.overlay {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.container {
+  max-width: 800px;
+  margin: 3vh auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: rgb(255, 255, 255);
+  padding: 25px;
+  border-radius: 1rem;
+  box-sizing: border-box;
+}
+
+/* TITLE */
+.title-container {
+  text-align: center;
+  margin-bottom: 3vh;
+}
+
+/* 
+  Gradient text
+  src: https://cssgradient.io/blog/css-gradient-text/
+*/
+#title {
+  background: -webkit-linear-gradient(#67b26b, #4ca2cb);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+
+/* SURVEY FORM */
+
+.personnal-information,
+.survey {
+  display: grid;
+  grid-template-columns: 35% 1fr;
+  grid-gap: 16px;
+}
+
+.survey-questions,
+.personnal-information > label {
+  grid-column: 1 / 2;
+}
+
+.survey-answers,
+.personnal-information > input,
+select {
+  grid-column: 2 / 3;
+}
+
+.survey-questions {
+  margin-top: 0;
+  text-align: left;
+}
+
+fieldset {
+  box-sizing: border-box;
+  margin: 2vh 0;
+  padding: 2rem;
+  border:0.5px solid #dee2e6 !important;
+  border-radius: 0.5rem;
+}
+
+legend {
+  font-size: 1.1rem;
+  font-weight:700;
+  text-transform: uppercase;
+  background: -webkit-linear-gradient(#67b26b, #4ca2cb);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+select,
+textarea {
+  font-family: "Roboto Mono", "monospace";
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.25rem;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+select {
+  height: 2.375rem;
+}
+
+.personnal-information label,
+.survey-questions {
+  font-weight: 700;
+}
+
+select,
+nput[type="radio"],
+input[type="checkbox"] {
+  cursor: pointer;
+}
+
+/*
+  Submit button 
+  src : https://www.fabriziovanmarciano.com/button-styles/
+*/
+.btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height:5vh;
+
+}
+
+.cta-btn{
+  border-radius: 4px;
+  background: linear-gradient(to right, #67b26b, #4ca2cb) !important;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 22px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.4s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.cta-btn span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.4s;
+}
+
+.cta-btn span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.cta-btn:hover span {
+  padding-right: 25px;
+}
+.cta-btn:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+/* MEDIA QUERIES */
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .survey-form,
+  .container {
+    max-width: 100%;
+  }
+  .personnal-information,
+  .survey {
+    grid-template-columns: 100%;
+  }
+  .survey-answers,
+  .personnal-information > input,
+  select,
+  .survey-answers {
+    grid-column: 1 / 2;
+  }
+}
